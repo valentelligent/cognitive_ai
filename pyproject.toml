@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=64.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cognitive_ai"
+version = "0.1.0"
+description = "Cognitive AI system with GPU acceleration"
+readme = "README.md"
+authors = [
+    { name = "Valentelligent", email = "your.email@example.com" }
+]
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+    "scikit-learn>=1.2.0",
+    "tensorflow>=2.14.0",
+    "torch>=1.9.0",
+    "transformers>=4.9.0",
+    "keyboard>=0.13.5",
+    "mouse>=0.7.1",
+    "psutil>=5.8.0",
+    "pywin32>=301"
+]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "isort",
+    "flake8",
+    "mypy",
+    "pytest",
+    "pytest-cov"
+]
+docs = [
+    "sphinx>=7.2.6",
+    "sphinx-rtd-theme>=1.3.0",
+    "sphinx-autodoc-typehints>=1.24.0",
+    "sphinx-copybutton>=0.5.2",
+    "myst-parser>=2.0.0",
+    "nbsphinx>=0.9.3"
+]
+
+[tool.setuptools]
+packages = ["core"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 100
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true

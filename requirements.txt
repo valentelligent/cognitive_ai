@@ -1,0 +1,57 @@
+# Core Dependencies
+numpy>=1.21.0
+pandas>=2.0.0
+scikit-learn>=1.2.0
+psutil>=5.9.0
+keyboard>=0.13.5
+mouse>=0.7.1
+pywin32>=305
+watchdog>=2.1.9
+
+# Deep Learning (Optional)
+tensorflow>=2.14.0  # Latest stable version compatible with Python 3.10
+torch==1.9.0  # Deep learning framework
+transformers==4.9.0  # NLP transformers
+
+# Web Framework (Optional)
+fastapi==0.68.0  # Modern web framework
+uvicorn==0.15.0  # ASGI server
+pydantic==1.8.2  # Data validation
+
+# Database (Optional)
+sqlalchemy==1.4.23  # SQL toolkit and ORM
+
+# GPU acceleration (optional)
+cupy-cuda12x>=12.0.0; platform_system=="Windows"
+pynvml>=11.5.0; platform_system=="Windows"
+
+# Environment Management
+python-dotenv==0.19.0  # Environment variable management
+
+# Testing
+pytest>=7.0.0
+pytest-cov>=4.0.0
+
+# Logging and Monitoring
+structlog==23.2.0
+prometheus-client==0.19.0
+
+# Development Tools
+black>=22.3.0
+isort>=5.12.0
+flake8>=4.0.0
+pre-commit>=2.15.0
+mypy>=0.950
+
+# Documentation
+sphinx>=7.2.6
+sphinx-rtd-theme>=1.3.0
+sphinx-autodoc-typehints>=1.24.0
+sphinx-copybutton>=0.5.2
+myst-parser>=2.0.0
+nbsphinx>=0.9.3
+
+# Code metrics and visualization
+radon>=6.0.1
+networkx>=3.2.1
+matplotlib>=3.8.2

@@ -1,0 +1,38 @@
+# Key settings
+
+conda activate cog_ai
+$env:CUDA_PATH = "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.1"
+$env:PYTHONPATH = "$PWD;$env:PYTHONPATH"
+
+---
+
+# Important features
+
+- Project root path setup
+- Dependency checks
+- Basic interaction tracking
+- Window info tracking
+
+Now I've improved all three key files:
+
+activate_env.ps1:
+Added directory creation
+Added tracker management functions
+Added proper Python path handling
+Added Start-Trackers and Stop-Trackers functions
+test_tracker.py:
+Added dependency validation
+Added environment checks
+Added proper logging
+Added error recovery
+Added test duration limits
+test_cognitive_tracker.py:
+Added CUDA validation
+Added environment checks
+Added proper logging
+Added GPU memory management
+Added error recovery
+To start the trackers:
+
+Open PowerShell
+Run: .\activate_env.ps1 -StartTrackers

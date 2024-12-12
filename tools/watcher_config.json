@@ -1,0 +1,35 @@
+{
+    "protected_paths": [
+        "tools/watch_changes.ps1",
+        "tools/install_service.ps1",
+        "tools/watcher_config.json",
+        "docs/installation.rst",
+        "core/monitoring/cognitive_tracker.py"
+    ],
+    "watch_extensions": [".py", ".rst", ".md", ".ps1", ".json"],
+    "ignore_patterns": [
+        "**/.*",
+        "**/__pycache__/*",
+        "**/logs/*",
+        "**/temp/*"
+    ],
+    "service_config": {
+        "name": "CognitiveAIDocWatcher",
+        "display_name": "Cognitive AI Documentation Watcher",
+        "description": "Maintains real-time documentation updates for Cognitive AI project",
+        "recovery_delay_ms": 60000,
+        "max_retries": 3
+    },
+    "logging": {
+        "log_file": "logs/documentation_watcher.log",
+        "max_log_size_mb": 10,
+        "backup_count": 5,
+        "log_level": "INFO"
+    },
+    "debounce_seconds": 5,
+    "critical_components": [
+        "changelog_generator.py",
+        "code_metrics.py",
+        "structure_viz.py"
+    ]
+}
